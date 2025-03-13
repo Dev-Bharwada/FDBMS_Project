@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Faculty Management System</h1>
+
+        <!-- Add Faculty Form -->
+        <div class="form-container">
+            <h2>Add New Faculty</h2>
+            <form id="facultyForm">
+                <input type="number" id="id" placeholder="Faculty ID" required>
+                <input type="text" id="name" placeholder="Faculty Name" required>
+                <input type="text" id="department" placeholder="Department" required>
+                <input type="text" id="designation" placeholder="Designation" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+                <input type="text" id="room" placeholder="Room Number" required>
+                <input type="text" id="duty" placeholder="Nature of Duty" required>
+                <button type="submit">Add Faculty</button>
+            </form>
+        </div>
+
+        <!-- Faculty Table -->
+        <div class="table-container">
+            <h2>Faculty List</h2>
+            <table id="facultyTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Designation</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Room</th>
+                        <th>Duty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic rows will be added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
