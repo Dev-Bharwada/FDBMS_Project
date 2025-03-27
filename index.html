@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Select Your Profile</h2>
+   
+    <div class="profile-option">
+        <input type="radio" id="administrator" name="profile" value="administrator">
+        <label for="administrator">Administrator</label>
+    </div>
+   
+    <div class="profile-option">
+        <input type="radio" id="faculty" name="profile" value="faculty">
+        <label for="faculty">Invigilator / Faculty</label>
+    </div>
+
+    <button onclick="submitProfile()">Submit</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
