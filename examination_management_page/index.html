@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Examination Management System</h2>
+        
+        <!-- Form to Add Examination Details -->
+        <form id="examForm">
+            <div class="input-group">
+                <label for="courseCode">Course Code</label>
+                <input type="text" id="courseCode" required>
+            </div>
+
+            <div class="input-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="input-group">
+                <label for="timing">Timing</label>
+                <input type="time" id="timing" required>
+            </div>
+
+            <div class="input-group">
+                <label for="students">No. of Students</label>
+                <input type="number" id="students" required>
+            </div>
+
+            <div class="input-group">
+                <label for="department">Department</label>
+                <input type="text" id="department" required>
+            </div>
+
+            <div class="input-group">
+                <label for="type">Type</label>
+                <select id="type" required>
+                    <option value="Regular">Regular</option>
+                    <option value="Backlog">Backlog</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-button">Add Examination</button>
+        </form>
+
+        <!-- Table to Display Scheduled Examinations -->
+        <h3>Scheduled Examinations</h3>
+        <table id="examTable">
+            <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Date</th>
+                    <th>Timing</th>
+                    <th>No. of Students</th>
+                    <th>Department</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be dynamically added -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
