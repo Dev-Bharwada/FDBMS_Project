@@ -1,0 +1,133 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d4e8f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #444;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Form Styling */
+.form-container {
+    margin-bottom: 30px;
+}
+/* Apply consistent styling to all form inputs and selects */
+.form-container input,
+.form-container select,
+.form-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+form input {
+    width: 100%;
+    padding: 7px; /*option size*/
+    margin: 7px 0; /*space between options*/
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #1e7f34;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Table Styling */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+table tbody tr:hover {
+    background-color: #f4f4f4;
+}
+
+/* Custom Dropdown Styles */
+.dropdown-container {
+    position: relative;
+    width: 100%;   
+    font-family: inherit;
+}
+
+.dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 999;
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.dropdown-list li {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-list li:hover {
+    background-color: #f0f0f0;
+}   
+

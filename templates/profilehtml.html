@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Selection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='profilecss.css') }}">
+</head>
+<body>
+
+    <!-- MIT-WPU Logo (Centered at the Top) -->
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='images/mitwpu-logo.png') }}" alt="MIT-WPU Logo">
+    </div>
+
+    <div class="container">
+        <h1>Welcome to MITWPU</h1>  
+        <h2>Select Your Profile</h2>
+    
+        <form id="profile-form">
+            <div class="profile-option">
+                <input type="radio" id="administrator" name="profile" value="administrator">
+                <label for="administrator">Administrator</label>
+            </div>
+        
+            <div class="profile-option">
+                <input type="radio" id="faculty" name="profile" value="faculty">
+                <label for="faculty">Invigilator / Faculty</label>
+            </div>
+        
+            <button type="button" onclick="submitProfile()">Submit</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='profilejss.js') }}"></script>
+    <script>
+        function submitProfile() {
+            const form = document.getElementById('profile-form');
+            const selectedProfile = form.querySelector('input[name="profile"]:checked');
+
+            if (selectedProfile) {
+                const profileValue = selectedProfile.value;
+                if (profileValue === 'administrator') {
+                    window.location.href = "/admin-dashboard";  // Redirect to admin dashboard
+                } else if (profileValue === 'faculty') {
+                    window.location.href = "/faculty-dashboard";  // Redirect to faculty dashboard
+                }
+            } else {
+                alert("Please select a profile.");
+            }
+        }
+    </script>
+</body>
+</html>

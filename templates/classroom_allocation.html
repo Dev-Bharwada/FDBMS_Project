@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='classroom_allocation.css') }}">
+</head>
+<body>
+    <button type="button" id="showClasses" class="blue-button">Show Allocated Classes</button>
+
+    <div class="container">
+        <h2>Classroom Management</h2>
+        <form id="classroomForm">
+            <label for="courseCode">Course Code</label>
+            <input type="text" id="courseCode" name="courseCode" required>
+
+            <label for="semester">Semester</label>
+            <input type="text" id="semester" name="semester" required>
+
+            <label for="numStudents">No. of Students</label>
+            <input type="number" id="numStudents" name="numStudents" required>
+
+            <label for="roomNo">Room No.</label>
+            <input type="text" id="roomNo" name="roomNo" required>
+
+            <label for="facultyId">Faculty ID</label>
+            <input type="text" id="facultyId" name="facultyId" required>
+
+            <button type="submit" class="green-button">Submit</button>
+        </form>
+    </div>
+    
+    <script src="{{ url_for('static', filename='classroom_allocation.js') }}"></script>
+</body>
+</html>

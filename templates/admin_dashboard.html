@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_dashboard.css') }}">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="/faculty-allocation">Faculty Allocation</a></li>
+            <li><a href="//current-upcoming-duties">Current/Upcoming Duties</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Admin Dashboard</h1>
+    </div>
+
+    <!-- Profile Section -->
+    <div class="profile-card">
+        <h2>Profile</h2>
+        <img src="/static/images/profile.png" alt="Profile Picture">
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Role:</strong> Admin</p>
+        <p><strong>Email:</strong> admin@example.com</p>
+        <button id="updateProfile">Update Profile</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='admindashboard.js') }}"></script>
+</body>
+</html>

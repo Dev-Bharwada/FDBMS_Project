@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Seating Arrangement</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='student_deets.css') }}">
+    <link rel="stylesheet" href="student_deets.css">
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Semester</th>
+                <th>Type</th>
+                <th>Course Code</th>
+                <th>PRN</th>
+                <th>Seat No</th>
+                <th>Room No</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+    <script src="{{ url_for('static', filename='student_deets.js') }}"></script>
+</body>
+</html>

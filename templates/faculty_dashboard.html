@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invigilation Duty Overview</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='faculty_dashboard.css') }}"><!-- Link to your CSS file -->
+</head>
+<body>
+
+    <!-- Sidebar Section -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="/individual-duties">Your Duties</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="content">
+       
+        <h1>Faculty Dashboard</h1>
+     
+    </div>
+<!-- Profile Section -->
+<div class="profile-card">
+    <h2>Profile</h2>
+    <img src="/static/images/profile.png" alt="Profile Picture">
+    <p><strong>Name:</strong> John Doe</p>
+    <p><strong>Role:</strong> Faculty Member</p>
+    <p><strong>Email:</strong> johndoe@example.com</p>
+    <p><strong>Department:</strong> Mathematics</p>
+    <button id="updateProfile">Update Profile</button>
+</div>
+    
+    </div>
+    <script src="{{ url_for('static', filename='faculty_dashboard.js') }}"></script> <!-- Link to your JavaScript file -->
+
+</body>
+</html>

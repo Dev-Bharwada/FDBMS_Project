@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Allocation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='faculty_management.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Faculty List</h1>
+
+        <!-- Add/Update Faculty Form -->
+        <div class="form-container">
+            <h2>Add/Update Faculty</h2>
+            <form id="facultyForm">
+                <input type="hidden" id="faculty-id"> <!-- Hidden field for updating existing faculty -->
+                <input type="number" id="id" placeholder="Faculty ID" required>
+                <input type="text" id="name" placeholder="Faculty Name" required>
+                
+                <!-- Department input -->
+                <div class="dropdown-container">
+                <input type="text" id="departmentSearch" placeholder="Select Department" autocomplete="off">
+                <ul id="departmentList" class="dropdown-list">
+                <li data-value="1">Computer Science</li>
+                <li data-value="2">Mathematics</li>
+                <li data-value="3">Science</li>
+                 <!-- Add more departments here -->
+                </ul>
+                </div>
+
+                <!--Designation-->
+                <div class="dropdown-container">
+                <input type="text" id="designationSearch" placeholder="Select Designation" autocomplete="off">
+                <ul id="designationList" class="dropdown-list">
+                <li data-value="1">Professor</li>
+                <li data-value="2">Associate Professor</li>
+                <li data-value="3">Assistant Professor</li>
+                <li data-value="4">Admin</li>
+                <!-- Add more as needed -->
+                </ul>
+                </div>
+
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+                <input type="text" id="room" placeholder="Room Number" required>
+                
+                <!-- Nature of duty -->
+                <div class="dropdown-container">
+                <input type="text" id="dutySearch" placeholder="Select Nature of Duty" autocomplete="off">
+                <ul id="dutyList" class="dropdown-list">
+                <li data-value="1">Faculty Exam Officer</li>
+                <li data-value="2">CAP Coordinator</li>
+                <li data-value="3">Questions paper Custodian</li>
+                <li data-value="4">Senior Supervisor</li>
+                <li data-value="5">Control Room Coordinator</li>
+                <li data-value="6">System/Stationary/Copy case Support Staff</li>
+                <li data-value="7">Invigilation</li>
+                <!-- Add more as needed -->
+                </ul>
+                </div>
+
+                <input type="number" id="total_duties" placeholder="Total Duties" required>
+                <input type="text" id="subject_taught" placeholder="Subject Taught" >
+
+                <!-- Add/Update button -->
+                <button type="submit" id="submitBtn">Add Faculty</button>
+            </form>
+        </div>
+
+        <!-- Faculty Table -->
+        <div class="table-container">
+            <h2>Faculty List</h2>
+            <table id="facultyTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department ID</th>
+                        <th>Designation</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Room</th>
+                        <th>Duty</th>
+                        <th>Total Duties</th>
+                        <th>Subject Taught</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic rows will be added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='faculty_management.js') }}"></script>
+</body>
+</html>

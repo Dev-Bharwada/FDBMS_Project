@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Allocations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='building_details.css') }}"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+<!-- Navigation Button to go back to the allocation page -->
+<button class="blue-button" id="backBtn">Back to Allocation Page</button>
+
+<div class="container">
+    <h1>View Building Allocations</h1>
+
+    <!-- Table for Displaying Allocations -->
+    <table id="allocations-table">
+        <thead>
+            <tr>
+                <th>Building Name</th>
+                <th>Department</th>
+                <th>No. of Exam Halls</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<script src="{{ url_for('static', filename='building_details.js') }}"></script> <!-- Link to your JavaScript file -->
+
+</body>
+</html>

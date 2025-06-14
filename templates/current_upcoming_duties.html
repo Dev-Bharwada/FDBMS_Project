@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current & Upcoming Duties</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='current_upcoming_duties.css') }}">
+</head>
+<body>
+
+<!-- Run Assignment Button -->
+<button class="blue-button" id="runAssignmentBtn">Run Duty Assignment</button>
+
+<div class="container">
+    <h1>Current & Upcoming Invigilation Duties</h1>
+
+    <!-- Duties Table -->
+    <div class="table-container">
+        <table id="duties-table">
+            <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Faculty ID</th>
+                    <th>Duty Date</th>
+                    <th>Duty Time</th>
+                    <th>Duty Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- JS will populate this -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='current_upcoming_duties.js') }}"></script>
+</body>
+</html>

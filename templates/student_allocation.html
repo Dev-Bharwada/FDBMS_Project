@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Allocation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='student_allocation.css') }}">
+</head>
+<body>
+
+<!-- View Allocations Button on Top Left -->
+<button class="blue-button">View Allocations</button>
+
+<div class="container">
+    <h1>Student Allocation</h1>
+
+    <div class="filters">
+        <label for="division">Division:</label>
+        <select id="division">
+            <option value="">All</option>
+            <option value="A">Division A</option>
+            <option value="B">Division B</option>
+        </select>
+
+        <label for="department">Department:</label>
+        <select id="department">
+            <option value="">All</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+        </select>
+
+        <label for="year">Year:</label>
+        <select id="year">
+            <option value="">All</option>
+            <option value="1">First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3">Third Year</option>
+            <option value="4">Fourth Year</option>
+        </select>
+
+        <label for="panel">Panel:</label>
+        <select id="panel">
+            <option value="">All</option>
+            <option value="1">Panel 1</option>
+            <option value="2">Panel 2</option>
+        </select>
+
+        <button id="submit-btn" onclick="filterData()">Submit</button>
+    </div>
+
+    
+    <script src="{{ url_for('static', filename='student_allocation.js') }}"></script>
+</body>
+</html>
