@@ -47,7 +47,7 @@ function getTextFromList(listId, value) {
             return item.textContent.trim();
         }
     }
-    return value; // fallback
+    return value; 
 }
 
 // Utility to extract value from custom dropdowns
@@ -144,6 +144,58 @@ function editFaculty(id) {
             document.getElementById('submitBtn').innerText = 'Update Faculty';
         });
 }
+/*Auto assign no of duties based on designation
+const designationField = document.getElementById("designation");
+const dutiesField = document.getElementById("duties");
+
+  const dutiesByDesignation = {
+    "Professor": 2,
+    "Associate Professor": 4,
+    "Assistant Professor": 6
+  };
+
+  designationField.addEventListener("change", function() {
+    const selected = designationField.value;
+    dutiesField.value = dutiesByDesignation[selected] || "";
+  });*/
+
+const dutiesByDesignation = {
+    "Professor": 2,
+    "Associate Professor": 4,
+    "Assistant Professor": 6
+  };
+
+  const designationInput = document.getElementById("designationSearch");
+  const designationList = document.getElementById("designationList");
+  const totalDutiesInput = document.getElementById("total_duties");
+
+  // Handle clicking on dropdown items
+  designationList.querySelectorAll("li").forEach(item => {
+    item.addEventListener("click", () => {
+      const designation = item.textContent.trim();
+
+      // Set selected value to input
+      designationInput.value = designation;
+
+      // Set total duties based on mapping
+      totalDutiesInput.value = dutiesByDesignation[designation] || "";
+
+      // Hide the dropdown list
+      designationList.style.display = "none";
+    });
+  });
+
+  // Show the dropdown when the input is focused
+  designationInput.addEventListener("focus", () => {
+    designationList.style.display = "block";
+  });
+
+  // Optional: hide dropdown when clicking outside
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".dropdown-container")) {
+      designationList.style.display = "none";
+    }
+  });
 
 // Sets custom dropdown to a value
 function setCustomDropdownValue(inputId, listId, targetValue) {
