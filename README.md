@@ -35,12 +35,12 @@ templates/   -> HTML templates
 app.py       -> Flask backend and APIs
 ```
 
-##Project Screenshots  
+## Project Screenshots  
 Login Screen  
-![Login Screen](Login.jpg)  
+![Login Screen](static/images/Login.jpg)  
 
 Admin Dashboard  
-![Admin Dashboard](AdminDashboard.jpg)  
+![Admin Dashboard](static/images/AdminDashboard.jpg)  
 
 Duty Assignment  
-![Duty Assignment](Duties.jpg)
+![Duty Assignment](static/images/Duties.jpg)
