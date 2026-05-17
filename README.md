@@ -22,7 +22,7 @@ The system was designed to help manage:
 
 - Faculty management system
 - Building and classroom allocation
-- CRUD APIs using Flask
+- REST APIs for CRUD operations using Flask
 - Automated invigilation duty assignment
 - Dynamic dashboard views
 - Stored procedures for duty allocation and overlap handling
