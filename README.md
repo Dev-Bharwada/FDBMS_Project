@@ -33,3 +33,14 @@ The system was designed to help manage:
 static/      -> CSS, JavaScript, assets
 templates/   -> HTML templates
 app.py       -> Flask backend and APIs
+```
+
+##Project Screenshots  
+Login Screen  
+![Login Screen](Login.jpg)  
+
+Admin Dashboard  
+![Admin Dashboard](AdminDashboard.jpg)  
+
+Duty Assignment  
+![Duty Assignment](Duties.jpg)
